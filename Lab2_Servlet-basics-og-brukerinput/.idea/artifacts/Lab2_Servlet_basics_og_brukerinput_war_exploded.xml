@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Lab2_Servlet-basics-og-brukerinput:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Lab2_Servlet_basics_og_brukerinput_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Lab2_Servlet-basics-og-brukerinput/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Lab2_Servlet-basics-og-brukerinput" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
