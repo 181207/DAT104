@@ -1,13 +1,13 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Lab1_Hilseapplikasjon:war exploded">
-    <output-path>$PROJECT_DIR$/classes/artifacts/Lab1_Hilseapplikasjon_war_exploded</output-path>
-    <root id="root">
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="classes">
-          <element id="module-output" name="Lab1_Hilseapplikasjon" />
-        </element>
-      </element>
-      <element id="javaee-facet-resources" facet="Lab1_Hilseapplikasjon/web/Web" />
-    </root>
-  </artifact>
+	<artifact type="exploded-war" name="Lab1_Hilseapplikasjon:war exploded">
+		<output-path>$PROJECT_DIR$/classes/artifacts/Lab1_Hilseapplikasjon_war_exploded</output-path>
+		<root id="root">
+			<element id="directory" name="WEB-INF">
+				<element id="directory" name="classes">
+					<element id="module-output" name="Lab1_Hilseapplikasjon" />
+				</element>
+			</element>
+			<element id="javaee-facet-resources" facet="Lab1_Hilseapplikasjon/web/Web" />
+		</root>
+	</artifact>
 </component>

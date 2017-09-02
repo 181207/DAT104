@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Valutakalkulator</title>
+</head>
+<body>
+	<form action="ValutaServlet" method="get">
+	<fieldset>
+	<legend>Valutakalkulator</legend>
+	  <p>Beløp: <input type="text" name="belop" value="1">
+		  	<select name="fra">
+		  		<option value="NOK">NOK</option>
+		    	<option value="EUR">EUR</option>
+		    	<option value="USD">USD</option>
+		    	<option value="GBP">GBP</option>
+	    	</select>
+    	</p>
+ 		<p>Skal veksles til: 
+		  	<select name="til">
+		    	<option value="EUR">EUR</option>
+		    	<option value="NOK">NOK</option>
+		    	<option value="USD">USD</option>
+		    	<option value="GBP">GBP</option>
+	    	</select>
+    	</p>	  
+ 		<input type="submit" value="Submit">
+ 	</fieldset>
+	</form> 
+</body>
+</html>
