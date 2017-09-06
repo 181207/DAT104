@@ -146,7 +146,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Lab2_Oppgave4" path="/Lab24" reloadable="true" source="org.eclipse.jst.jee.server:Lab2_Oppgave4"/><Context docBase="Lab1_Hilseapplikasjon" path="/Lab1_Hilseapplikasjon" reloadable="true" source="org.eclipse.jst.jee.server:Lab1_Hilseapplikasjon"/><Context docBase="Lab2_Oppgave5" path="/Lab25" reloadable="true" source="org.eclipse.jst.jee.server:Lab2_Oppgave5"/><Context docBase="Lab2_Oppgave6" path="/Lab26" reloadable="true" source="org.eclipse.jst.jee.server:Lab2_Oppgave6"/></Host>
+      <Context docBase="Lab2_Oppgave4" path="/Lab24" reloadable="true" source="org.eclipse.jst.jee.server:Lab2_Oppgave4"/><Context docBase="Lab1_Hilseapplikasjon" path="/Lab1_Hilseapplikasjon" reloadable="true" source="org.eclipse.jst.jee.server:Lab1_Hilseapplikasjon"/><Context docBase="Lab2_Oppgave5" path="/Lab25" reloadable="true" source="org.eclipse.jst.jee.server:Lab2_Oppgave5"/><Context docBase="Lab2_Oppgave6" path="/Lab26" reloadable="true" source="org.eclipse.jst.jee.server:Lab2_Oppgave6"/><Context docBase="Lab3_Oppgave1" path="/Lab31" reloadable="true" source="org.eclipse.jst.jee.server:Lab3_Oppgave1"/></Host>
     </Engine>
   </Service>
 </Server>
