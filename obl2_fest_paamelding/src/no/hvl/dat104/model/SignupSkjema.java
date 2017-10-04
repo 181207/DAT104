@@ -9,7 +9,7 @@ public class SignupSkjema {
 	private String etternavnFeilmelding;
 	private String mobil;
 	private String mobilFeilmelding;
-	private String kjonn;
+	private String kjonn; //true=kvinne, false=mann
 	private String kjonnFeilmelding;
 
 	public SignupSkjema(){
@@ -107,7 +107,7 @@ public class SignupSkjema {
 		}
 		if (!Validering.boolsk(kjonn)) {
 			kjonn="";
-			mobilFeilmelding = Validering.boolskFeilmelding(kjonn);
+			kjonnFeilmelding = Validering.boolskFeilmelding(kjonn);
 		}
 	}
 }
