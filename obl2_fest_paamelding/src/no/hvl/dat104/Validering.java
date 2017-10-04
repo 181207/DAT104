@@ -1,10 +1,12 @@
-package no.hvl.dat104.model;
+package no.hvl.dat104;
 
 public class Validering {
-	static private int tekstMaksLengde = 2;
+	static private int tekstMinLengde = 2;
+	static private int tekstMaksLengde = 20;
+
 	
 	static public boolean tekst(String tekst) {
-		return  tekst!=null && tekst.length()>=Validering.tekstMaksLengde;
+		return  tekst!=null && tekst.length()>=Validering.tekstMinLengde && tekst.length()<=Validering.tekstMaksLengde;
 	}
 	static public boolean mobil(String mobil) {
 		return mobil!=null && mobil.length()==8 && mobil.matches("[0-9]+");
@@ -17,7 +19,7 @@ public class Validering {
 		if (tekst==null) {
 			return "Kan ikke være tomt";
 		}
-		else if (tekst.length()<Validering.tekstMaksLengde) {
+		else if (tekst.length()<Validering.tekstMinLengde || tekst.length()>Validering.tekstMaksLengde) {
 			return "Må være minst to tegn";
 		}
 	return "";

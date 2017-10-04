@@ -1,4 +1,4 @@
-package no.hvl.dat104.model;
+package no.hvl.dat104;
 
 import javax.servlet.http.HttpServletRequest;
 

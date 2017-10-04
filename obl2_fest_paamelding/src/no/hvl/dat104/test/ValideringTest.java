@@ -1,10 +1,11 @@
 package no.hvl.dat104.test;
 
-import no.hvl.dat104.model.*;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import no.hvl.dat104.*;
 
 public class ValideringTest {
 	String s1;
@@ -13,6 +14,7 @@ public class ValideringTest {
 	String s4;
 	String s5;
 	String s6;
+	String s7;
 	
 	String m1;
 	String m2;
@@ -34,6 +36,7 @@ public class ValideringTest {
 		s4 = "N";
 		s5 = "";
 		s6 = null;
+		s7 = "dawjdawjiowdai ojdaws";
 		
 		m1="11223344";
 		m2="aaaaaaaa";
@@ -57,6 +60,7 @@ public class ValideringTest {
 		assertFalse(Validering.tekst(s4));
 		assertFalse(Validering.tekst(s5));
 		assertFalse(Validering.tekst(s6));
+		assertFalse(Validering.tekst(s7));
 	}
 	
 	@Test

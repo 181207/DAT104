@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +11,11 @@
 <body>
 <h2>Påmeldingsbekreftelse</h2>
 <p>Påmeldingen er mottatt for</p>
-<p>&nbsp;&nbsp;&nbsp;Arne<br/>
-&nbsp;&nbsp;&nbsp;Arnesen<br/>
-&nbsp;&nbsp;&nbsp;90123456<br/>
-&nbsp;&nbsp;&nbsp;mann</p>
+<p>&nbsp;&nbsp;&nbsp; ${skjema.fornavn}<br/>
+&nbsp;&nbsp;&nbsp; ${skjema.etternavn}<br/>
+&nbsp;&nbsp;&nbsp; ${skjema.mobil}<br/>
+&nbsp;&nbsp;&nbsp; 	<c:choose> <c:when test="${skjema.kjonn == 'true'}"> Kvinne </c:when> <c:when test="${skjema.kjonn == 'false'}"> Mann </c:when> </c:choose></p>
 <p><b>NB! Husk å betale til kassereren før festen!</b></p>
-<a href="deltagerliste.html">Gå til deltagerlisten</a>
+<a href="deltakerliste">Gå til deltagerlisten</a>
 </body>
 </html>

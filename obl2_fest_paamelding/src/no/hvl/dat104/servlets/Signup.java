@@ -6,7 +6,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import no.hvl.dat104.model.SignupSkjema;;
+import javax.servlet.http.HttpSession;
+
+import no.hvl.dat104.SignupSkjema;;
 
 
 @WebServlet(name = "Signup",urlPatterns = "/signup")
@@ -20,8 +22,23 @@ public class Signup extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		SignupSkjema skjema = new SignupSkjema(request);
 		skjema.feilSjekk();
-		request.getSession().setAttribute("skjema", skjema);
-		response.sendRedirect("signup");
+		
+		//Oppretter et sesjonsobjekt (evt. null om det ikke eksisterer noen):
+        HttpSession sesjon = request.getSession(false);
+        if (sesjon != null) {
+            sesjon.invalidate();
+        }
+		//Oppretter et sesjonsobjekt (evt. få et eksisterende gyldig hvis det finnes):
+        sesjon = request.getSession(true);
+		sesjon.setAttribute("skjema", skjema);
+		
+		if(!skjema.Valider()) {
+			response.sendRedirect("signup");
+		}
+		else {
+	        sesjon.setMaxInactiveInterval(10);
+	        response.sendRedirect("bekreftelse");
+		}
 	}
 
 }
