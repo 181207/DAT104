@@ -17,6 +17,7 @@ public class Logout extends HttpServlet {
         if (sesjon == null || sesjon.getAttribute("skjema") == null) {
             response.sendRedirect("login"  + "?requiresLogin");
         } else {
+        	sesjon.invalidate();
     		request.getRequestDispatcher("WEB-INF/ferdig.jsp").forward(request, response);
         }	
 	}

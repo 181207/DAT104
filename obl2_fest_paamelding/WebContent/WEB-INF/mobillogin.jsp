@@ -14,7 +14,10 @@ Logg inn ved å gi mobil-nummeret ditt.</p>
 <form action="login" method="post">
   <fieldset>
     <legend>Logg inn</legend>
-    <p>Mobil: <input type="password" name="mobil"/><font color="red"> <c:if test="${param.invalidUsername ne null}"> Må tilhøre registrert deltager </c:if><c:if test="${param.requiresLogin ne null}"> Du må være innlogget for å få tilgang </c:if> </font></p>
+    <p>Mobil: <input type="password" name="mobil"/><font color="red">
+     <c:if test="${param.invalidUsername ne null}"> Må tilhøre registrert deltager </c:if>
+     <c:if test="${param.requiresLogin ne null}"> Du må være innlogget for å få tilgang </c:if> 
+     </font></p>
     <p><input type="submit" value="Logg inn" /></p>
   </fieldset>
 </form>
