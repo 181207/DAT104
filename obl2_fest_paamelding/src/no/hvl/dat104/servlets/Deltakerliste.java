@@ -17,6 +17,7 @@ public class Deltakerliste extends HttpServlet {
         if (sesjon == null || sesjon.getAttribute("skjema") == null) {
             response.sendRedirect("login"  + "?requiresLogin");
         } else {
+        	sesjon.setMaxInactiveInterval(60);
     		request.getRequestDispatcher("WEB-INF/deltagerliste.jsp").forward(request, response);
         }
 	}

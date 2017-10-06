@@ -9,7 +9,7 @@
 <body>
 	<h1>Festadministrasjon</h1>
 	<p>Velg et av alternativene nedenfor</p>
-	<a href="Adminlogin">Innlogging kasserer</a><br>
+	<a href="adminlogin">Innlogging kasserer</a><br>
 	<a href="login">Innlogging deltaker</a><br>
 	<a href="signup">Påmelding</a>
 </body>

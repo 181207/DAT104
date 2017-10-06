@@ -20,6 +20,7 @@ public class Bekreftelse extends HttpServlet {
         if (sesjon == null || sesjon.getAttribute("skjema") == null) {
             response.sendRedirect("login"  + "?requiresLogin");
         } else {
+        	sesjon.setMaxInactiveInterval(60);
     		request.getRequestDispatcher("WEB-INF/paameldingsbekreftelse.jsp").forward(request, response);
         }
 	}
