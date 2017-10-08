@@ -43,9 +43,7 @@ public class Login extends HttpServlet {
             skjema.setKjonn(deltaker.getKjonn().toString());
             sesjon.setAttribute("skjema", skjema);
             sesjon.setMaxInactiveInterval(60);
-        }
-		
-		if (deltaker != null) {
+
 	        response.sendRedirect("deltakerliste");
 		}
 		else {

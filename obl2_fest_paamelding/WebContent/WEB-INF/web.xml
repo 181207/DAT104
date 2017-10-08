@@ -4,4 +4,12 @@
   <welcome-file-list>
     <welcome-file>start</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>Adminlogin</servlet-name>
+    <servlet-class>no.hvl.dat104.servlets.Adminlogin</servlet-class>
+    <init-param>
+      <param-name>pw</param-name>
+      <param-value>pass</param-value>
+    </init-param>
+  </servlet>
 </web-app>
