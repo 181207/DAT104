@@ -39,7 +39,7 @@ public class Signup extends HttpServlet {
         sesjon = request.getSession(true);
 		sesjon.setAttribute("skjema", skjema);
 		
-		if(!skjema.Valider()) {
+		if(!skjema.Valider() || !unikMobilID(skjema.getMobil())) {
 			response.sendRedirect("signup");
 		}
 		else {
@@ -49,6 +49,9 @@ public class Signup extends HttpServlet {
 	        sesjon.setMaxInactiveInterval(60);//60 sekunder
 	        response.sendRedirect("bekreftelse");
 		}
+	}
+	private boolean unikMobilID(String mobil) {
+		return deltakerEAO.finnDeltaker(mobil)==null;
 	}
 
 }
